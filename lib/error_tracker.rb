@@ -2,11 +2,9 @@
 
 require_relative "error_tracker/version"
 
-module ErrorTracker
+module ErrorTracker # :nodoc:
   class Error < StandardError; end
-  # Your code goes here...
 end
-
 
 require 'rails'
 require 'rails/generators'

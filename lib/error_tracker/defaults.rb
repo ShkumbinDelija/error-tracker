@@ -1,13 +1,17 @@
-class ErrorTracker::Defaults
-  attr_accessor :user_context, :extra_args
+# frozen_string_literal: true
 
-  class << self
-    def user_context(options = {})
-      @user ||= options
-    end
+module ErrorTracker
+  class Defaults # :nodoc:
+    attr_accessor :user_context, :extra_args
 
-    def extra_args(options = {})
-      @extra_args ||= options
+    class << self
+      def user_context(options = {})
+        @user ||= options
+      end
+
+      def extra_args(options = {})
+        @extra_args ||= options
+      end
     end
   end
 end
